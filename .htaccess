@@ -1,0 +1,7 @@
+RewriteEngine On
+
+ErrorDocument 404 /Web/API/dashboard/View/Errors/404.html
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /Web/API/dashboard/View/Errors/404.html [L]

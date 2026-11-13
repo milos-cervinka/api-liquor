@@ -1,0 +1,10 @@
+<?php
+require_once __DIR__ . '/../../config.php';
+
+class {{MODULE_UC}}Model 
+{
+    public function getData(): array 
+    {
+        return ['message' => 'Data load successful'];
+    }
+}

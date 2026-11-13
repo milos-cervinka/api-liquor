@@ -1,0 +1,2 @@
+INSERT INTO sales (invoice_id, ordered_on, store_number, item_number, state_bottle_cost, state_bottle_retail, bottles_sold)
+VALUES (:invoice_id, :ordered_on, :store_number, :item_number, :state_bottle_cost, :state_bottle_retail, :bottles_sold);

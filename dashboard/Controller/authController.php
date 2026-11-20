@@ -26,7 +26,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout')
 {
     unset($_SESSION['user']);
     session_destroy();
-    header('Location: /Web/API/dashboard/View/Sites/dashboard/index.html');
+    header('Location: /Web/API/index.html');
     exit;
 }
 
@@ -84,7 +84,7 @@ if ($payload)
         'role'     => $role
     ];
 
-    header('Location: /Web/API/dashboard/View/Sites/dashboard/index.html');
+    header('Location: /Web/API/index.html');
     exit;
 } 
 else 

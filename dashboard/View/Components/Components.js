@@ -1,8 +1,9 @@
+// https://medium.com/front-end-weekly/how-to-build-reusable-html-components-without-component-based-frameworks-2f7747f4c5db
 // Source - https://stackoverflow.com/a/77835274
 // Posted by fmacdee, modified by community. See post 'Timeline' for change history
 // Retrieved 2026-10-13, License - CC BY-SA 4.0
 
-class ComponentHandler 
+class ComponentHandler
 {
     constructor(basePath) 
     {
@@ -40,7 +41,7 @@ class ComponentHandler
                                         
                                         if (lowerMod === 'dashboard') 
                                         {
-                                            link = `/Web/API/dashboard/View/Sites/dashboard/index.html`;
+                                            link = `/Web/API/index.html`;
                                         }
 
                                         menu.innerHTML += `
@@ -141,3 +142,12 @@ function renderGoogleSignInButton(container)
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(initHeaderAuth, 150);
 });
+
+const templatePath = "/Web/API/dashboard/View/Components/Templates";
+const handler = new ComponentHandler(templatePath);
+
+document.addEventListener("DOMContentLoaded", function() {
+    handler.register('main-header', 'header.html');
+    handler.register('main-sidebar', 'sidebar.html');
+});
+
